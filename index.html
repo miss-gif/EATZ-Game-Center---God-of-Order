@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EATZ 게임센터 - 주문의 신</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="./script.js" ></script>
+</head>
+
+<body>
+  <div class="main-container">
+    <div class="result-container">
+      <div class="result" id="result"></div>
+      <div class="control-buttons">
+        <button class="start-button" id="startButton" onclick="toggleStart()">스타트</button>
+        <div>
+          <button class="control-button" onclick="deleteLastDigit()">지우기</button>
+          <button class="control-button" onclick="clearResult()">초기화</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="keypad" id="leftKeypad">
+        <div class="button" id="left7" onclick="appendNumber(7)">7</div>
+        <div class="button" id="left8" onclick="appendNumber(8)">8</div>
+        <div class="button" id="left9" onclick="appendNumber(9)">9</div>
+        <div class="button" id="left4" onclick="appendNumber(4)">4</div>
+        <div class="button" id="left5" onclick="appendNumber(5)">5</div>
+        <div class="button" id="left6" onclick="appendNumber(6)">6</div>
+        <div class="button" id="left1" onclick="appendNumber(1)">1</div>
+        <div class="button" id="left2" onclick="appendNumber(2)">2</div>
+        <div class="button" id="left3" onclick="appendNumber(3)">3</div>
+      </div>
+      
+      <div class="keypad" id="rightKeypad">
+        <div class="button" id="right7" data-number="7" onclick="removeHighlightedNumber(7)">7</div>
+        <div class="button" id="right8" data-number="8" onclick="removeHighlightedNumber(8)">8</div>
+        <div class="button" id="right9" data-number="9" onclick="removeHighlightedNumber(9)">9</div>
+        <div class="button" id="right4" data-number="4" onclick="removeHighlightedNumber(4)">4</div>
+        <div class="button" id="right5" data-number="5" onclick="removeHighlightedNumber(5)">5</div>
+        <div class="button" id="right6" data-number="6" onclick="removeHighlightedNumber(6)">6</div>
+        <div class="button" id="right1" data-number="1" onclick="removeHighlightedNumber(1)">1</div>
+        <div class="button" id="right2" data-number="2" onclick="removeHighlightedNumber(2)">2</div>
+        <div class="button" id="right3" data-number="3" onclick="removeHighlightedNumber(3)">3</div>
+      </div>
+    </div>
+  </div>
+
+ 
+</body>
+</html>
